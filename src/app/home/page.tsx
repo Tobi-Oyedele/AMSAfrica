@@ -2,7 +2,7 @@ import { ArrowRight, Users, Globe, Award, BookOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Home() {
+export default function Home() {
   const stats = [
     { number: "150+", label: "Member Schools" },
     { number: "45", label: "Countries" },
