@@ -40,10 +40,9 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
         {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
       </button>
 
-      {/* Mobile Menu */}
       <div
         className={`
-          fixed left-0 w-full bg-emerald-600 z-40 flex flex-col items-center 
+          fixed left-0 w-full bg-primary z-40 flex flex-col items-center 
           transition-all duration-300
           ${
             isMenuOpen

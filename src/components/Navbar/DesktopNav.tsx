@@ -30,11 +30,13 @@ const DesktopNav = () => {
               <li key={link.path}>
                 <Link
                   href={link.path}
-                  className={`relative text-gray-700 hover:text-emerald-600 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-emerald-600 after:transition-all after:duration-300 hover:after:w-full ${
+                  className={`relative transition-colors ${
                     isActive
-                      ? "after:w-full after:bg-emerald-600 text-emerald-600"
-                      : ""
-                  }`}
+                      ? "text-primary font-semibold"
+                      : "text-gray-700 hover:text-primary"
+                  } after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:w-0 after:transition-all after:duration-300 hover:after:w-full 
+                  ${isActive ? "after:w-full" : ""}
+    `}
                 >
                   {link.name}
                 </Link>
@@ -42,6 +44,16 @@ const DesktopNav = () => {
             );
           })}
         </ul>
+
+        {/* External button */}
+        <a
+          href="https://www.amsafricaconference.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+        >
+          Visit Conference
+        </a>
       </div>
     </nav>
   );
