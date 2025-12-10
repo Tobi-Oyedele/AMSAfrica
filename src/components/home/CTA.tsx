@@ -9,7 +9,8 @@ const CTA = () => {
           education in Africa
         </p>
         <Link
-          href="/contact"
+          href="https://amsafricaconference.org/membership-form/"
+          target="_blank"
           className="inline-flex items-center justify-center px-7 py-4 bg-white text-primary rounded-lg font-bold text-lg hover:bg-blue-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg"
         >
           Get Started Today

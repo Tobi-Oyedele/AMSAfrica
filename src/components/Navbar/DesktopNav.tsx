@@ -51,7 +51,7 @@ const DesktopNav = () => {
           rel="noopener noreferrer"
           className="px-5 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
         >
-          Visit AMSA 2026 Medical Education Conference
+          AMSA 2026 Medical Education Conference
         </a>
       </div>
     </nav>
