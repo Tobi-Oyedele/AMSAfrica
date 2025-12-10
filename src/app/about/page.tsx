@@ -1,16 +1,20 @@
-import { Target, Users, Globe, Award, History, Eye, Heart } from "lucide-react";
+import { Target, Eye } from "lucide-react";
 
 const about = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <h1 className="text-white mb-6 text-5xl md:text-6xl font-semibold leading-tight">
             About AMSA
           </h1>
           <p className="leading-relaxed">
-            Building a stronger future for medical education across Africa
+            The Association of Medical Schools in Africa was established in
+            Ibadan in 1961 and formally inaugurated at the subsequent meeting in
+            Kampala Uganda in December, 1963. The objectives of the Association
+            is the advancement of medical education as the driver of effective
+            health systems in Africa in all of its aspects.
           </p>
         </div>
       </section>
@@ -25,11 +29,9 @@ const about = () => {
                 <h2 className="text-gray-900">Our Mission</h2>
               </div>
               <p className="text-gray-700">
-                To advance the quality of medical education in Africa through
-                collaboration, innovation, and advocacy, ensuring that all
-                African medical schools have the resources and support needed to
-                train competent, compassionate healthcare professionals who can
-                address the continent&apos;s health challenges.
+                AMSA works for strengthening of African Medical Schools by
+                producing quality graduates that are relevant and responsive to
+                societal needs
               </p>
             </div>
 
@@ -39,10 +41,10 @@ const about = () => {
                 <h2 className="text-gray-900">Our Vision</h2>
               </div>
               <p className="text-gray-700">
-                A future where every African medical school delivers world-class
-                education, produces research that transforms healthcare
-                delivery, and graduates physicians who are equipped to meet the
-                diverse health needs of African communities.
+                AMSA aspires to be the premier organization to enhance standards
+                of medical schools and advancing sustainable development and
+                quality of medical education for the achievement of a healthy
+                Africa.
               </p>
             </div>
           </div>

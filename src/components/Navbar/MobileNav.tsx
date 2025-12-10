@@ -36,6 +36,15 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
         <p>Logo</p>
       </Link>
 
+      <a
+        href="https://www.amsafricaconference.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-5 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+      >
+        Visit Conference
+      </a>
+
       <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
         {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
       </button>

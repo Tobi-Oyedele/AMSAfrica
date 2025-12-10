@@ -45,14 +45,13 @@ const DesktopNav = () => {
           })}
         </ul>
 
-        {/* External button */}
         <a
           href="https://www.amsafricaconference.org"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
         >
-          Visit Conference
+          Visit AMSA 2026 Medical Education Conference
         </a>
       </div>
     </nav>
