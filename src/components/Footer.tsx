@@ -44,15 +44,21 @@ export function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 shrink-0" />
-                <span className="text-gray-400">info@amsa-africa.org</span>
+                <span className="text-gray-400">
+                  secretariat.amsafrica@gmail.com
+                </span>
               </li>
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 shrink-0" />
-                <span className="text-gray-400">+254 20 123 4567</span>
+                <span className="text-gray-400">+234 916 113 5886</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 shrink-0" />
-                <span className="text-gray-400">Ibadan, Nigeria</span>
+                <span className="text-gray-400">
+                  AMSA Secretariat Office of the Provost, Nathaniel Idowu
+                  Clinical Drug Trials Building, College of Medicine, University
+                  of Ibadan, Ibadan, Nigeria.
+                </span>
               </li>
             </ul>
 

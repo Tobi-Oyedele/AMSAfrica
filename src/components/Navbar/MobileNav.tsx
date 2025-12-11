@@ -3,7 +3,6 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 
 type MobileNavProps = {
   isMenuOpen: boolean;
@@ -21,11 +20,6 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
     { name: "Contact", path: "/contact" },
   ];
 
-  // Lock scroll when mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
-  }, [isMenuOpen]);
-
   return (
     <nav
       role="navigation"
@@ -35,15 +29,6 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
       <Link href="/" className="flex items-center gap-2">
         <p>Logo</p>
       </Link>
-
-      <a
-        href="https://www.amsafricaconference.org"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-5 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-      >
-        Visit Conference
-      </a>
 
       <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
         {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
@@ -60,7 +45,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           }
         `}
       >
-        <ul className="flex flex-col gap-8 pt-12">
+        <ul className="flex flex-col gap-8 pt-12 items-center">
           {navLinks.map((link) => {
             const isActive = pathname === link.path;
 
@@ -68,10 +53,8 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               <li key={link.path}>
                 <Link
                   href={link.path}
-                  className={`text-2xl transition-colors ${
-                    isActive
-                      ? "text-white"
-                      : "text-white hover:text-primary-accent"
+                  className={`text-white text-2xl transition-colors ${
+                    isActive ? "text-white" : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -80,6 +63,15 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               </li>
             );
           })}
+
+          <a
+            href="https://www.amsafricaconference.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            AMSA 2026 Medical Education Conference
+          </a>
         </ul>
       </div>
     </nav>
