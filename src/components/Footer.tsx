@@ -22,7 +22,6 @@ export function Footer() {
               {[
                 { label: "About Us", href: "/about" },
                 { label: "Members", href: "/members" },
-                { label: "Programs", href: "/programs" },
                 { label: "News & Events", href: "/news-events" },
                 { label: "Our Team", href: "/team" },
                 { label: "Contact", href: "/contact" },

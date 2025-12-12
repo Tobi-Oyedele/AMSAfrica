@@ -8,11 +8,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div>
-      <div className="md:hidden">
+      <div className="block lg:hidden">
         <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <DesktopNav />
       </div>
     </div>
