@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const DesktopNav = () => {
   const pathname = usePathname();
@@ -17,12 +18,21 @@ const DesktopNav = () => {
     <nav
       role="navigation"
       aria-label="Utility"
-      className="flex flex-col justify-center h-16 px-6 bg-white backdrop-blur-md"
+      className="h-20 px-6 bg-white backdrop-blur-md"
     >
-      <div className="flex items-center justify-between h-full">
-        <h2>Logo</h2>
+      <div className="max-w-7xl mx-auto relative flex items-center h-full">
+        <div className="flex items-center">
+          <Image
+            src="/images/amsa-logoo.png"
+            alt="AMSA Logo"
+            width={200}
+            height={80}
+            className="h-20 w-auto object-contain"
+            priority
+          />
+        </div>
 
-        <ul className="hidden md:flex gap-6 font-medium">
+        <ul className="flex items-center gap-8 font-medium absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => {
             const isActive = pathname === link.path;
 
@@ -34,7 +44,7 @@ const DesktopNav = () => {
                     isActive
                       ? "text-primary font-semibold"
                       : "text-gray-700 hover:text-primary"
-                  } after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:w-0 after:transition-all after:duration-300 hover:after:w-full 
+                  } after:absolute after:left-0 after:-bottom-2 after:h-0.5 after:bg-primary after:w-0 after:transition-all after:duration-300 hover:after:w-full 
                   ${isActive ? "after:w-full" : ""}
     `}
                 >
@@ -45,14 +55,16 @@ const DesktopNav = () => {
           })}
         </ul>
 
-        <a
-          href="https://www.amsafricaconference.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-5 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-        >
-          AMSA 2026 Medical Education Conference
-        </a>
+        <div className="ml-auto">
+          <a
+            href="https://www.amsafricaconference.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 text-sm bg-primary text-white rounded-md font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
+          >
+            AMSA 2026 Medical Education Conference
+          </a>
+        </div>
       </div>
     </nav>
   );

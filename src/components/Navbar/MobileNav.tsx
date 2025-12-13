@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 type MobileNavProps = {
   isMenuOpen: boolean;
@@ -24,10 +25,17 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
     <nav
       role="navigation"
       aria-label="Utility"
-      className="bg-white flex items-center justify-between h-16 px-4 fixed w-full z-50"
+      className="bg-white flex items-center justify-between h-20 px-4 fixed w-full z-50"
     >
       <Link href="/" className="flex items-center gap-2">
-        <p>Logo</p>
+        <Image
+          src="/images/amsa-logoo.png"
+          alt="AMSA Logo"
+          width={200}
+          height={80}
+          className="h-20 w-auto object-contain"
+          priority
+        />
       </Link>
 
       <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
