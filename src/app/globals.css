@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  font-family: var(--font-montserrat);
+}
+
+p,
+a {
+  font-family: var(--font-open-sans);
+}
+
 @theme {
   --color-primary: #007f9e;
   --color-secondary: #e6f4f7;
