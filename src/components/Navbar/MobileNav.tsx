@@ -48,8 +48,8 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           transition-all duration-300
           ${
             isMenuOpen
-              ? "top-16 h-screen opacity-100"
-              : "top-16 h-0 opacity-0 pointer-events-none"
+              ? "top-20 h-screen opacity-100"
+              : "top-20 h-0 opacity-0 pointer-events-none"
           }
         `}
       >
