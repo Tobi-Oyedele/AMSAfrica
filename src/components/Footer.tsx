@@ -69,7 +69,8 @@ export function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://x.com/Officialamsafri?s=20"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Twitter size={20} />
