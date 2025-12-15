@@ -40,7 +40,7 @@ const DesktopNav = () => {
               <li key={link.path}>
                 <Link
                   href={link.path}
-                  className={`relative transition-colors ${
+                  className={`relative font-montserrat transition-colors ${
                     isActive
                       ? "text-primary font-semibold"
                       : "text-gray-700 hover:text-primary"
@@ -60,7 +60,7 @@ const DesktopNav = () => {
             href="https://www.amsafricaconference.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-sm bg-primary text-white rounded-md font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
+            className="px-4 py-2 text-sm font-montserrat bg-primary text-white rounded-md font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
           >
             AMSA 2026 Medical Education Conference
           </a>

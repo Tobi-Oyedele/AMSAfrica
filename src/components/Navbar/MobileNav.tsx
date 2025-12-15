@@ -61,7 +61,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               <li key={link.path}>
                 <Link
                   href={link.path}
-                  className={`text-white text-2xl transition-colors ${
+                  className={`text-white font-montserrat text-2xl transition-colors ${
                     isActive ? "text-white" : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -76,7 +76,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
             href="https://www.amsafricaconference.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="mx-5 py-2 text-center bg-white rounded-lg font-semibold"
           >
             AMSA 2026 Medical Education Conference
           </a>
