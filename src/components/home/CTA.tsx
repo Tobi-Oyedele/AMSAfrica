@@ -3,7 +3,7 @@ const CTA = () => {
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-white text-4xl font-semibold mb-6">
+        <h2 className="text-white text-4xl font-bold mb-6">
           Ready to Join Our Network?
         </h2>
         <p className="text-emerald-50 mb-8 text-lg">

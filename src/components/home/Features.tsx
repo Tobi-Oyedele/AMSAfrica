@@ -31,7 +31,7 @@ const Features = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-gray-900 mb-4 text-4xl font-semibold">
+          <h2 className="text-gray-900 mb-4 text-4xl font-bold">
             Why Join AMSA?
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 text-lg">
