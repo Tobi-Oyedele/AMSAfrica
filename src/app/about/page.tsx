@@ -42,6 +42,19 @@ const about = () => {
         </div>
       </section>
 
+      {/*Amsa Video */}
+      <section className="px-4 py-12">
+        <div className="mx-auto w-full max-w-none md:max-w-3xl lg:max-w-5xl">
+          <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+            <video
+              src="/videos/amsa-video.mp4"
+              controls
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
