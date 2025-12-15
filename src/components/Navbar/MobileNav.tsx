@@ -76,9 +76,9 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
             href="https://www.amsafricaconference.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-5 py-2 text-center bg-white rounded-lg font-semibold"
+            className="px-5 py-2 text-center bg-white rounded-lg font-semibold"
           >
-            AMSA 2026 Medical Education Conference
+            Register for AMSA 2026 Conference
           </a>
         </ul>
       </div>

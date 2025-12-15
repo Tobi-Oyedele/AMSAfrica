@@ -18,7 +18,7 @@ const DesktopNav = () => {
     <nav
       role="navigation"
       aria-label="Utility"
-      className="h-20 px-6 bg-white backdrop-blur-md"
+      className="h-20 bg-white backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto relative flex items-center h-full">
         <div className="flex items-center">
@@ -60,9 +60,9 @@ const DesktopNav = () => {
             href="https://www.amsafricaconference.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-sm font-montserrat bg-primary text-white rounded-md font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
+            className="px-2 py-2 text-sm bg-primary text-white rounded-md font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
           >
-            AMSA 2026 Medical Education Conference
+            Register for AMSA 2026 Conference
           </a>
         </div>
       </div>

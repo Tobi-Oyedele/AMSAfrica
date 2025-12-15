@@ -2,8 +2,6 @@ const Stats = () => {
   const stats = [
     { number: "33", label: "Member Schools" },
     { number: "10", label: "Countries" },
-    { number: "75,000+", label: "Students" },
-    { number: "12,000+", label: "Faculty" },
   ];
 
   return (
