@@ -26,7 +26,7 @@ const page = () => {
       </section>
 
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
@@ -128,7 +128,9 @@ const page = () => {
 
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h2 className="text-gray-900 mb-6">Send Us a Message</h2>
+              <h2 className="text-gray-900 mb-6 text-xl font-semibold">
+                Send Us a Message
+              </h2>
               <form className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-gray-700 mb-2">
