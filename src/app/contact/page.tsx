@@ -41,12 +41,14 @@ const page = () => {
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
                   <div className="shrink-0">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 text-primary rounded-lg">
+                    <div className="inline-flex items-center justify-center text-primary rounded-lg">
                       <MapPin size={24} />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-gray-900 mb-1">Office Address</h3>
+                    <h3 className="text-gray-900 mb-1 font-semibold">
+                      Office Address
+                    </h3>
                     <p className="text-gray-600">
                       AMSA Secretariat Office of the Provost, Nathaniel Idowu
                       <br />
@@ -59,19 +61,19 @@ const page = () => {
 
                 <div className="flex items-start">
                   <div className="shrink-0">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 text-primary rounded-lg">
+                    <div className="inline-flex items-center justify-center text-primary rounded-lg">
                       <Phone size={24} />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-gray-900 mb-1">Phone</h3>
+                    <h3 className="text-gray-900 mb-1 font-semibold ">Phone</h3>
                     <p className="text-gray-600">+234 916 113 5886</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="shrink-0">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 text-primary rounded-lg">
+                    <div className="inline-flex items-center justify-center text-primary rounded-lg">
                       <Mail size={24} />
                     </div>
                   </div>
@@ -85,12 +87,14 @@ const page = () => {
 
                 <div className="flex items-start">
                   <div className="shrink-0">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 text-primary rounded-lg">
+                    <div className="inline-flex items-center justify-center text-primary rounded-lg">
                       <Clock size={24} />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-gray-900 mb-1">Office Hours</h3>
+                    <h3 className="text-gray-900 mb-1 font-semibold">
+                      Office Hours
+                    </h3>
                     <p className="text-gray-600">
                       Monday - Friday: 8:00 AM - 5:00 PM (EAT)
                       <br />
