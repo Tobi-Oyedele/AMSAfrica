@@ -21,8 +21,8 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "About Us", href: "/about" },
-                { label: "Members", href: "/members" },
-                { label: "News & Events", href: "/news-events" },
+                { label: "Publications", href: "/publications" },
+                { label: "News", href: "/news-events" },
                 { label: "Our Team", href: "/team" },
                 { label: "Contact", href: "/contact" },
               ].map((item) => (

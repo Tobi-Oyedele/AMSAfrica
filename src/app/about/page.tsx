@@ -115,47 +115,6 @@ const about = () => {
           </div>
         </div>
       </section>
-
-      {/* Impact Numbers */}
-      <section className="py-20 bg-gray-50 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-gray-900 mb-4 text-4xl font-bold">
-              Our Impact
-            </h2>
-            <p className="text-gray-600">
-              Making a difference in medical education across Africa
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 text-gray-600">
-            <div className="text-center">
-              <div className="text-primary text-2xl font-semibold mb-2">
-                55+
-              </div>
-              <p className="text-gray-700 font-medium">Years of Service</p>
-            </div>
-            <div className="text-center">
-              <div className="text-primary text-2xl font-semibold mb-2">
-                500,000+
-              </div>
-              <p className="text-gray-700 font-medium">Doctors Trained</p>
-            </div>
-            <div className="text-center">
-              <div className="text-primary text-2xl font-semibold mb-2">
-                2,500+
-              </div>
-              <p className="text-gray-700 font-medium">Research Publications</p>
-            </div>
-            <div className="text-center">
-              <div className="text-primary text-2xl font-semibold mb-2">
-                100+
-              </div>
-              <p className="text-gray-700 font-medium">Annual Programs</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

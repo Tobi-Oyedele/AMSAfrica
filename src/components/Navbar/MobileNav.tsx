@@ -16,9 +16,10 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Members", path: "/members" },
     { name: "Publications", path: "/publications" },
-    { name: "News & Events", path: "/news-events" },
-    { name: "Our Team", path: "/team" },
+    { name: "News", path: "/news-events" },
+    { name: "Team", path: "/team" },
     { name: "Contact", path: "/contact" },
   ];
 
