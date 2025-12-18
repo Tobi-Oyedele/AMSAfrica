@@ -21,6 +21,7 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "About Us", href: "/about" },
+                { label: "Members", href: "/members" },
                 { label: "Publications", href: "/publications" },
                 { label: "News", href: "/news-events" },
                 { label: "Our Team", href: "/team" },
