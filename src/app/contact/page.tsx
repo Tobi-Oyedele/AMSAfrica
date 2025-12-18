@@ -6,7 +6,6 @@ import {
   Clock,
   Linkedin,
   Twitter,
-  Facebook,
 } from "lucide-react";
 
 const page = () => {
@@ -108,7 +107,8 @@ const page = () => {
                 <h3 className="text-gray-900 mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/amsaafrica/"
+                    target="_blank"
                     className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
                   >
                     <Linkedin size={20} />
@@ -119,12 +119,6 @@ const page = () => {
                     className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
                   >
                     <Twitter size={20} />
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
-                  >
-                    <Facebook size={20} />
                   </a>
                 </div>
               </div>

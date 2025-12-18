@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -64,7 +64,8 @@ export function Footer() {
 
             <div className="flex space-x-5 mt-6">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/amsaafrica/"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Linkedin size={20} />
@@ -75,12 +76,6 @@ export function Footer() {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook size={20} />
               </a>
             </div>
           </div>
