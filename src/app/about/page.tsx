@@ -59,10 +59,6 @@ const about = () => {
       {/*Anti-terrorism certificate */}
       <section className="px-4 py-12">
         <div className="mx-auto w-full max-w-4xl">
-          <h3 className="mb-6 text-center text-xl font-semibold text-gray-800">
-            Anti Laundering Certification
-          </h3>
-
           <div className="rounded-xl overflow-hidden shadow-lg bg-white">
             <Image
               src="/images/anti-terrorisim.png"
