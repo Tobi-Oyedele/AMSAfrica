@@ -1,4 +1,5 @@
 import { Target, Eye, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const about = () => {
   const objectives = [
@@ -50,6 +51,26 @@ const about = () => {
               src="/videos/amsa-video.mp4"
               controls
               className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/*Anti-terrorism certificate */}
+      <section className="px-4 py-12">
+        <div className="mx-auto w-full max-w-4xl">
+          <h3 className="mb-6 text-center text-xl font-semibold text-gray-800">
+            Anti-Terrorism Compliance Certification
+          </h3>
+
+          <div className="rounded-xl overflow-hidden shadow-lg bg-white">
+            <Image
+              src="/images/test.png"
+              alt="Anti-Terrorism Compliance Certificate"
+              width={1200}
+              height={1600}
+              className="w-full h-auto object-contain"
+              priority
             />
           </div>
         </div>

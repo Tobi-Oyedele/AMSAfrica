@@ -55,9 +55,9 @@ export function Footer() {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 shrink-0" />
                 <span className="text-gray-400">
-                  AMSA Secretariat Office of the Provost, Nathaniel Idowu
-                  Clinical Drug Trials Building, College of Medicine, University
-                  of Ibadan, Ibadan, Nigeria.
+                  AMSA Secretariat, Office of the Provost, Nathaniel O. Idowu
+                  Clinical Drug Trials and Toxicology Unit, College of Medicine,
+                  University of Ibadan, Nigeria
                 </span>
               </li>
             </ul>
@@ -84,7 +84,7 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              &copy; 2025 Association of Medical Schools in Africa. All rights
+              &copy; 2026 Association of Medical Schools in Africa. All rights
               reserved.
             </p>
           </div>
