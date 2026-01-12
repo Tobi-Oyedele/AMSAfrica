@@ -65,7 +65,7 @@ const about = () => {
 
           <div className="rounded-xl overflow-hidden shadow-lg bg-white">
             <Image
-              src="/images/test.png"
+              src="/images/anti-terrorisim.png"
               alt="Anti-Terrorism Compliance Certificate"
               width={1200}
               height={1600}
