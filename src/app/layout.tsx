@@ -6,8 +6,8 @@ import { Footer } from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700"], // normal and bold
-  variable: "--font-montserrat", // optional CSS variable
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
 });
 
 const openSans = Open_Sans({
