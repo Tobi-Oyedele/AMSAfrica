@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   Mail,
   Phone,
@@ -8,7 +11,50 @@ import {
   Twitter,
 } from "lucide-react";
 
-const page = () => {
+const Page = () => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    setSuccess(false);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      institution: String(formData.get("institution") || ""),
+      subject: String(formData.get("subject") || ""),
+      message: String(formData.get("message") || ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to send message");
+      }
+
+      setSuccess(true);
+      form.reset();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -49,11 +95,9 @@ const page = () => {
                       Office Address
                     </h3>
                     <p className="text-gray-600">
-                      AMSA Secretariat Office of the Provost, Nathaniel Idowu
-                      <br />
-                      Clinical Drug Trials Building, College of Medicine,
-                      <br />
-                      University of Ibadan, Ibadan, Nigeria.
+                      AMSA Secretariat, Office of the Provost, Nathaniel O.
+                      Idowu Clinical Drug Trials and Toxicology Unit, College of
+                      Medicine, University of Ibadan, Nigeria
                     </p>
                   </div>
                 </div>
@@ -65,7 +109,7 @@ const page = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-gray-900 mb-1 font-semibold ">Phone</h3>
+                    <h3 className="text-gray-900 mb-1 font-semibold">Phone</h3>
                     <p className="text-gray-600">+234 916 113 5886</p>
                   </div>
                 </div>
@@ -109,6 +153,7 @@ const page = () => {
                   <a
                     href="https://www.linkedin.com/company/amsaafrica/"
                     target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
                   >
                     <Linkedin size={20} />
@@ -116,6 +161,7 @@ const page = () => {
                   <a
                     href="https://x.com/Officialamsafri?s=20"
                     target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
                   >
                     <Twitter size={20} />
@@ -129,12 +175,14 @@ const page = () => {
               <h2 className="text-gray-900 mb-6 text-xl font-semibold">
                 Send Us a Message
               </h2>
-              <form className="space-y-6">
+
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-gray-700 mb-2">
                     Full Name *
                   </label>
                   <input
+                    name="name"
                     type="text"
                     id="name"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600"
@@ -148,6 +196,7 @@ const page = () => {
                     Email Address *
                   </label>
                   <input
+                    name="email"
                     type="email"
                     id="email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600"
@@ -164,6 +213,7 @@ const page = () => {
                     Institution/Organization
                   </label>
                   <input
+                    name="institution"
                     type="text"
                     id="institution"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600"
@@ -176,16 +226,26 @@ const page = () => {
                     Subject *
                   </label>
                   <select
+                    name="subject"
                     id="subject"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600"
                     required
+                    defaultValue=""
                   >
-                    <option value="">Select a subject</option>
-                    <option value="membership">Membership Inquiry</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="research">Research Collaboration</option>
-                    <option value="events">Event Information</option>
-                    <option value="general">General Inquiry</option>
+                    <option value="" disabled>
+                      Select a subject
+                    </option>
+                    <option value="Membership Inquiry">
+                      Membership Inquiry
+                    </option>
+                    <option value="Partnership Opportunity">
+                      Partnership Opportunity
+                    </option>
+                    <option value="Research Collaboration">
+                      Research Collaboration
+                    </option>
+                    <option value="Event Information">Event Information</option>
+                    <option value="General Inquiry">General Inquiry</option>
                   </select>
                 </div>
 
@@ -194,20 +254,29 @@ const page = () => {
                     Message *
                   </label>
                   <textarea
+                    name="message"
                     id="message"
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600"
                     placeholder="Tell us how we can help..."
                     required
-                  ></textarea>
+                  />
                 </div>
+
+                {success && (
+                  <p className="text-sm text-green-600">
+                    Message sent successfully.
+                  </p>
+                )}
+                {error && <p className="text-sm text-red-600">{error}</p>}
 
                 <button
                   type="submit"
-                  className="w-full cursor-pointer flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                  disabled={loading}
+                  className="w-full cursor-pointer flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Send size={20} className="mr-2" />
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
@@ -218,4 +287,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

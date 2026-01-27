@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat, Open_Sans } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -27,9 +17,61 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AMSAfrica",
+  metadataBase: new URL("https://www.amsafrica.org"),
+
+  title: {
+    default: "AMSAfrica | Association of Medical Schools in Africa",
+    template: "%s | AMSAfrica",
+  },
   description:
-    "The Association of Medical Schools in Africa was established in Ibadan in 1961 and formally inaugurated at the subsequent meeting in Kampala Uganda in December, 1963. The objectives of the Association is the advancement of medical education as the driver of effective health systems in Africa in all of its aspects.",
+    "AMSAfrica advances medical education across Africa to strengthen health systems through collaboration, training, and research.",
+  keywords:
+    "medical schools Africa, medical education Africa, AMSAfrica, African medical schools, healthcare education, medical training Africa, health systems Africa",
+  applicationName: "AMSAfrica",
+  alternates: {
+    canonical: "/", // becomes https://www.amsafrica.org/
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://www.amsafrica.org/",
+    siteName: "AMSAfrica",
+    title: "AMSAfrica | Association of Medical Schools in Africa",
+    description:
+      "Advancing medical education across Africa to strengthen health systems through collaboration, training, and research.",
+
+    images: [
+      {
+        url: "/images/amsa-logoo.png",
+        alt: "AMSAfrica - Association of Medical Schools in Africa",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AMSAfrica | Association of Medical Schools in Africa",
+    description:
+      "Advancing medical education across Africa to strengthen health systems through collaboration, training, and research.",
+    images: ["/images/amsa-logoo.png"],
+  },
+
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
