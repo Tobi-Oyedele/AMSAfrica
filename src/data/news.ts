@@ -19,7 +19,7 @@ export const newsData: News[] = [
   {
     title: "AMSA Medical Education Conference 2026",
     date: "March 24 - 26, 2026",
-    image: "/images/amsa-2026-save-the-date.jpg",
+    image: "/images/amsa_updated_flyer.jpeg",
     description:
       "Increasing capacity and retention of the global health workforce",
     link: "https://www.amsafricaconference.org",

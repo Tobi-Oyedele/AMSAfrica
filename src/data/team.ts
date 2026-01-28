@@ -59,6 +59,6 @@ export const leadership: TeamMember[] = [
     name: "Prof E. Oluwabunmi Olapade Olaopa",
     role: "Ex-Officio",
     institution: "University of Ibadan, Ibadan.",
-    image: "/images/prof-olaopa.jpg",
+    image: "/images/professor-olapade-olaopa.JPG.jpeg",
   },
 ];

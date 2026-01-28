@@ -33,4 +33,12 @@ export const slides: Slide[] = [
     type: "image",
     src: "/images/amsa3.jpg",
   },
+  {
+    type: "image",
+    src: "/images/carousel-picture.jpeg",
+  },
+  {
+    type: "image",
+    src: "/images/amcoa-april-2025.jpg",
+  },
 ];
