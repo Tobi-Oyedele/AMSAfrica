@@ -34,7 +34,7 @@ const FeaturedContent = () => {
           </div>
 
           <Image
-            src="/images/hero-bg.webp"
+            src="/images/medical-doctors.png"
             alt="image"
             height={400}
             width={400}
