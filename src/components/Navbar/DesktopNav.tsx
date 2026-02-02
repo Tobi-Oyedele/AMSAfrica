@@ -9,7 +9,7 @@ const DesktopNav = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Members", path: "/members" },
+    { name: "Progenitor Schools", path: "/members" },
     { name: "Publications", path: "/publications" },
     { name: "News", path: "/news-events" },
     { name: "Team", path: "/team" },
@@ -33,7 +33,7 @@ const DesktopNav = () => {
           />
         </div>
 
-        <ul className="flex items-center gap-8 font-medium absolute left-1/2 -translate-x-1/2">
+        <ul className="flex items-center gap-5 font-medium absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => {
             const isActive = pathname === link.path;
 
@@ -46,8 +46,7 @@ const DesktopNav = () => {
                       ? "text-primary font-semibold"
                       : "text-gray-700 hover:text-primary"
                   } after:absolute after:left-0 after:-bottom-2 after:h-0.5 after:bg-primary after:w-0 after:transition-all after:duration-300 hover:after:w-full 
-                  ${isActive ? "after:w-full" : ""}
-    `}
+                  ${isActive ? "after:w-full" : ""}`}
                 >
                   {link.name}
                 </Link>
