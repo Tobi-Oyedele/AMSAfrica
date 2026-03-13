@@ -19,7 +19,7 @@ const page = () => {
 
       {/* News Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-3">
           {newsData.map((news, index) => (
             <div
               key={index}

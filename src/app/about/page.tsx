@@ -47,10 +47,11 @@ const about = () => {
       <section className="px-4 py-12">
         <div className="mx-auto w-full max-w-none md:max-w-3xl lg:max-w-5xl">
           <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-            <video
-              src="/videos/amsa-video.mp4"
-              controls
-              className="w-full h-full object-cover"
+            <iframe
+              src="https://www.youtube.com/embed/qn851lIvCGA"
+              className="w-full h-full"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             />
           </div>
         </div>
